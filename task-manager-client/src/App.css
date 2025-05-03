@@ -1,0 +1,120 @@
+/* General styling for root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Spinning animation for logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for logo on preference */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2em;
+}
+
+/* Link styling */
+.read-the-docs {
+  color: #888;
+}
+
+/* Focusable button styling */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/* Focus styles for buttons */
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color; /* Clear focus outline */
+  border-color: #646cff; /* Optional focus border color */
+}
+
+/* Nav button styles */
+.nav-button {
+  color: white !important;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+/* Nav button focus styling */
+.nav-button:focus {
+  outline: 2px solid #646cff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button:hover {
+  color: #e0e0ff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
+  .nav-button {
+    color: #213547 !important;
+  }
+
+  .nav-button:hover {
+    background-color: #f0f0f0;
+    color: #000 !important;
+  }
+}

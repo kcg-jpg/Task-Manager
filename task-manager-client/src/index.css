@@ -1,0 +1,145 @@
+/* Root styling */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff; /* Removed black background and set it to white for light mode */
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anchor styling */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Allow body to grow vertically */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff; /* Set background color to white */
+}
+
+/* Heading styling */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Button styling */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9; /* Button background is light */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/* Focus and hover states for buttons */
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  border-color: #646cff;
+}
+
+/* Custom nav button styling for Layout.jsx */
+.nav-button {
+  color: #213547 !important;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.3s ease;
+}
+
+/* Nav button hover and focus styling */
+.nav-button:focus {
+  outline: 2px solid #646cff;
+}
+
+.nav-button:hover {
+  color: #e0e0ff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff; /* Ensure background is light in light mode */
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
+  .nav-button {
+    color: #213547 !important;
+  }
+
+  .nav-button:hover {
+    background-color: #f0f0f0;
+    color: #000 !important;
+  }
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;  /* Align items to the edges */
+  align-items: center;  /* Vertically center items */
+  padding: 1rem;
+  width: 100%;  /* Ensure header takes full width */
+  position: sticky;  /* Fix the header to the top of the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;  /* Ensure it stays on top */
+  background-color: #ffffff;  /* Header background is white */
+}
+
+/* Add some margin to the main content to ensure it's below the header */
+main {
+  margin-top: 80px;  /* Adjust based on the height of your header */
+  padding: 20px;
+}
+
+/* Adjust layout of navigation buttons inside the header */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;  /* Align buttons to the right */
+  align-items: center;
+}
+
+.nav-buttons .nav-button {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+}
