@@ -7,7 +7,6 @@ import Tasks from './pages/Tasks';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import About from './pages/About';
-import DragAndDrop from './components/DragAndDrop';
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {
@@ -35,8 +34,6 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
-          <Route path="drag-and-drop" element={<DragAndDrop />} />
-          <Route path="*" element={<div>Page Not Found</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
