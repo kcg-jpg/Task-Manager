@@ -1,18 +1,12 @@
-https://n11416084.ifn666.com {
-
-    # Serve the built frontend
-    handle_path / {
-        root * task-manager-client/dist
-        try_files {path} /index.html
-        file_server
+localhost {
+    handle / {
+        reverse_proxy localhost:5173
     }
 
-    # Reverse proxy all API requests to your backend
-    handle_path /api/* {
+    handle /api/* {
         reverse_proxy localhost:3000
     }
 
-    # Optional: Debugging logs (can remove in production)
     log {
         output file /var/log/caddy/access.log
         level info
